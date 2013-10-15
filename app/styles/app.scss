@@ -1,0 +1,100 @@
+// Flash view rendering
+// @keyframes domChanged { from { background: yellow; } }
+// @-webkit-keyframes domChanged { from { background: yellow; } }
+// .ember-view { animation: domChanged 1s; -webkit-animation: domChanged 1s; }
+
+@import "bootstrap-sass/lib/bootstrap";
+
+/* Space out content a bit */
+body {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.footer {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+    padding-bottom: 19px;
+}
+
+/* Custom page footer */
+.footer {
+    padding-top: 19px;
+    color: #777;
+    border-top: 1px solid #e5e5e5;
+}
+
+.container-narrow > hr {
+    margin: 30px 0;
+}
+
+/* Main */
+
+#main {
+    margin: 20px 0;
+}
+
+/* Modal */
+
+#modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(128,128,128,0.8);
+}
+
+#modal-contents {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 640px;
+    height: 480px;
+    margin-left: -320px;
+    margin-top: -240px;
+    background: #fff;
+}
+
+body.show-modal #modal,
+body.show-modal #modal-contents {
+    display: block;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 730px;
+    }
+
+    /* Remove the padding we set earlier */
+    .header,
+    .marketing,
+    .footer {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    /* Space out the masthead */
+    .header {
+        margin-bottom: 30px;
+    }
+    /* Remove the bottom border on the jumbotron for visual effect */
+    .jumbotron {
+        border-bottom: 0;
+    }
+}
