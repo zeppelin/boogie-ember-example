@@ -4,10 +4,13 @@ var UserController = Ember.ArrayController.extend({
   query: '',
 
   queryDidChange: function() {
-    var query = this.get('query') || '',
+    var query = this.get('query'),
         results = generateResults(query);
 
-    this.set('content', results);
+    Ember.run.next(this, function() {
+      this.send('updateRoute', query);
+      this.set('model', results);
+    });
   }.observes('query')
 });
 
