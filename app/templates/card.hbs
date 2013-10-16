@@ -1,0 +1,22 @@
+<div class="modal-backdrop in"></div>
+
+<div class="modal in">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        {{link-to '&times' 'user' class='close'}}
+        <h4 class="modal-title">Hello User #{{id}}!</h4>
+      </div>
+
+      <div class="modal-body">
+        <p>One fine body&hellip;</p>
+      </div>
+
+      <div class="modal-footer">
+        {{link-to 'Cool story!' 'user' class='btn btn-primary' active=false}}
+      </div>
+
+    </div>
+  </div>
+</div>
