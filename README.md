@@ -1,41 +1,45 @@
-# Ember App Kit [![Build Status](https://travis-ci.org/stefanpenner/ember-app-kit.png?branch=master)](https://travis-ci.org/stefanpenner/ember-app-kit)
+# Ember example
 
-Ember App Kit aims to be the foundation for ambitious web applications built with Ember. It's intended to be used either on its own or as the base scaffolding for projects using [Ember Tools](https://github.com/rpflorence/ember-tools), [generator-ember](https://github.com/yeoman/generator-ember) and a hypothetical official executable at some point in the future.
+A demo [Ember](http://emberjs.com/) app for my [Client-side MVC talk](https://prezi.com/sxv2t_nambyd/client-side-mvc-backbonemarionette-ember-angular/).
 
-This project has been extracted out of several real world applications and is actively used. Currently it covers the basics fairly well, but much still needs to be done. As we learn and as more contributors join in it continues to evolve. If you encounter any bugs, clunky features or missing documentation, just submit an issue and we'll respond ASAP.
+It's for demonstration, I have preferred short and easy to understand code I can present, not perfection.
 
-We welcome ideas and experiments.
+## Why?
 
-## Getting Started
+There is [TodoMVC](http://todomvc.com/), but I have found that doesn't answer the questions I had about MVC. This example matches the problems better I had during prototyping our CRM system (admin system for the Prezi Support Team).
 
-* [Project Documentation Site](http://stefanpenner.github.io/ember-app-kit/)
-* [Getting Started Guide](http://stefanpenner.github.io/ember-app-kit/guides/getting-started.html)
-* [ember-app-kit-todos](https://github.com/stefanpenner/ember-app-kit-todos) - the Emberjs [todos](http://emberjs.com/guides/getting-started/) using Ember App Kit 
-* *Safari Books Online Blog* - [Introduction to Ember App Kit](http://blog.safaribooksonline.com/2013/09/18/ember-app-kit/) for more experienced Ember developers by @mixonic
-* *Ember Sherpa* - [Introduction to Ember App Kit](http://embersherpa.com/articles/introduction-to-ember-app-kit/) for those who are new to the Grunt workflow by @taras 
+## What is it?
 
+The features of this example:
+* 2 views with routing: a clock and a search
+* There is a navigation menu with 2 tabs for the 2 views, highlights the actual path
+* The clock is doing auto-updating, like any status widget on your admin site (you can easily add AJAX call to display something from the server)
+* The search is displaying results as you type (you should add a delay and an AJAX call), and also updates the URL so it's bookmarkable
 
-## Features
+## Installation
 
-- Sane project structure
-- ES6 module transpiler support (easy, future-proof modules)
-- Module system-aware resolver (see [Referencing views](https://github.com/stefanpenner/ember-app-kit/wiki/Referencing-Views) and [Using Ember loaders](https://github.com/stefanpenner/ember-app-kit/wiki/Using-Ember-loaders))
-- Transparent project compilation & minification for easy deploys via [Grunt](http://gruntjs.com/)
-- Package management via [Bower](https://github.com/bower/bower)
-- Optional support for CoffeeScript, SASS, LESS or Stylus
-- Testing via QUnit, Ember Testing and Karma (with examples)
-- Linting via JSHint (including module syntax)
-- Catch-all `index.html` for easy reloading of pushState router apps
+You will need [Node.js](http://nodejs.org/) v0.8 (but I recommend v0.10), [Compass](http://compass-style.org/) and [Sass](http://sass-lang.com/). Please make sure you have the latest to avoid problems.
 
-## Future Goals
+You may also have to install [grunt-cli](https://github.com/gruntjs/grunt-cli), and you will have access to the `grunt` command anywhere on your system:
 
-- Source maps for transpiled modules
-- Better support for Ember generators
-- Easier to install 3rd party packages
-- Faster, more intelligent builds
+```bash
+sudo npm install -g grunt-cli
+```
 
-Think anything else is missing? Feel free to open an issue (or, even better, a PR)! Discussion and feedback is always appreciated.
+And if you have them, these are the easy steps for initializing the repository:
 
-## Special Thanks
+```bash
+npm install
+bower install
+grunt server
+```
 
-Some ideas in ember-app-kit originated in work by Yapp Labs (@yapplabs) with McGraw-Hill Education Labs (@mhelabs) on [yapplabs/glazier](https://github.com/yapplabs/glazier). Thanks to Yapp and MHE for supporting the Ember ecosystem!
+And *voilá*, it will load the page in your default browser. You can run `grunt server` when you want. It will also watch for changes and reload the page in your browser.
+
+## License
+
+You are free to use this code for any purposes.
+
+## Bugfixes, feature requests
+
+Feel free to do pull requests. If the code will remain simple, but will introduce the framework better, they are really welcome.
