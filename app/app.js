@@ -3,6 +3,10 @@ import registerComponents from 'appkit/utils/register_components';
 
 Ember.ENV.ENABLE_ALL_FEATURES = true;
 
+Ember.TextField.reopen({
+  attributeBindings: ['autofocus']
+});
+
 var App = Ember.Application.extend({
   LOG_ACTIVE_GENERATION: true,
   LOG_MODULE_RESOLVER: true,
